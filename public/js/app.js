@@ -58,11 +58,11 @@ btnEnviar.addEventListener("click", () => {
 //Fetch
 const postresData = async () => {
     try {
-        const res = await fetch("../DB/api.json")
+        const res = await fetch("./DB/api.json")
         const data = await res.json()
         pintarCards(data)
 
-        const res2 = await fetch("../DB/api.json")
+        const res2 = await fetch("./DB/api.json")
         const data2 = await res2.json()
         listarPostres(data2)
 
