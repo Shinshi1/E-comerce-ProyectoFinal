@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- JS -->
+    <script defer src="./js/variables.js"></script>
+    <script defer src="./js/app.js"></script>
+    <!-- libreria SweetAlert2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Postres Cannoli con Tailwind | PostCSS</title>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="container m-auto">
+        <!-- Menu inicio -->
+        <header class="sticky flex items-center px-4 py-4 text-black menu">
+            <img class="h-10 rounded-full" src="./img/postresCanolli-icon.jpg" alt="Dulce Capricho">
+            <span class="mt-1 ml-1 text-4xl text-logo"><b>Postres</b>Cannoli</span>
+            <!-- carrito inicio -->
+            <div class="flex-grow text-right">
+                <img class="inline h-7 icon" id="cartIcon" src="./icon/cart.svg" alt="Menu">
+            </div>
+            <!-- carrito fin -->
+        </header>
+        <!-- Menu fin -->
+
+        <!-- Hero inicio -->
+        <section class="px-10 py-6 mb-2 text-white hero">
+            <h1 class="mb-5 text-3xl text-black text- h1-title">Hace tu pedido ya mismo!!</h1>
+            <!-- Hero Fin -->
+
+        </section>
+
+    </div>
+
+
+    <!-- Contenedor de Productos inicio -->
+    <div class="mt-5 productos-container">
+
+        <!-- Sección 1 inicio -->
+        <section class="section-1">
+
+            <!-- Buscador inicio -->
+            <div class="container flex justify-center mx-auto mt-4 rounded-sm buscador ">
+                <input type="search" class="outline-none buscador__text" placeholder="Buscar..."
+                    id="input-buscar"></input>
+            </div>
+            <!-- Buscador fin -->
+
+            <!-- Tortas -->
+            <h3 class="ml-4 text-5xl h3-title">Productos</h3>
+
+            <!-- card Tortas inicio -->
+            <div class="card-container" id="tortas-card">
+
+            </div>
+            <!-- card Tortas inicio -->
+
+        </section>
+
+        <!-- Tabla Cart Footer inicio -->
+        <div>
+            <table class="fixed rounded tabla-cart">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Item</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Acción</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-item"></tbody>
+                <tfoot>
+                    <tr id="cart-footer">
+
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <!-- Tabla Cart Footer fin -->
+
+        <!-- Categorias Select inicio -->
+        <div class="w-1/6 text-center categoria-container font-poppins">
+            <h4 class="font-medium">Categorias</h4>
+            <label for="categoria"></label>
+            <select id="input-categoria">
+                <option selected>TODOS</option>
+            </select>
+            <i></i>
+        </div>
+        <!-- Categorias Select fin -->
+
+        <!-- Realizar Compra inicio -->
+        <div class="pb-3 m-auto realizar-container" id="div-realizar">
+            <button id="checkout" class="text-xl">Realizar Compra</button>
+        </div>
+        <!-- Realizar Compra fin -->
+
+        <div class="container m-auto mt-20 mb-10 hidden" id="div-formulario">
+            <form action="#" method="post" class="text-center form" id="formulario">
+				<h3 class="py-5 text-lg font-bold">Realiza tu pedido</h3>
+				<div class="form-group">
+					<input type="text" class="form__input" id="name" placeholder="Nombre y Apellido" name="name" value="Blass Hurtado Ferrer">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form__input" id="adress" placeholder="Dirección" name="adress" value="Arenales 5620, Bs. As.">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form__input" id="email" placeholder="Email" name="email" value="BlassHurtadoFerrer@email.com">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form__input" placeholder="Teléfono(opcional)" value="+54 11 0000-0000">
+				</div>
+				<div class="text-center">
+					<input class="form__btn" type="submit" value="Enviar" id="btn-enviar">
+					<input class="form__btn" type="reset" value="Borrar">
+				</div>
+			</form>
+        </div>
+        
+    </div>
+    <!-- Sección 1 fin -->
+
+    <!-- Contenedor de Productos fin -->
+
+    <!-- Footer inicio -->
+    <div class="flex justify-around px-4 py-4 footer">
+        <div class="text-white footer__text">
+            <h4>REDES</h4>
+            <span>
+                <img src="./icon/facebook.svg" alt="facebook">
+            </span>
+            <span>
+                <img src="./icon/instagram.svg" alt="instagram">
+            </span>
+
+        </div>
+
+        <h4 class="text-5xl text-white footer__title">Postres Cannoli</h4>
+
+        <div class="text-white footer__text">
+            <h5>CONTACTO</h5>
+            <p>info@PCanolli</p>
+            <p>+54 011 9999-9999</p>
+        </div>
+    </div>
+    <!-- Footer fin -->
+
+    <!-- Templates inicio -->
+
+    <!-- TMPLT cards inicio -->
+    <template id="tmplt-tortas-card">
+        <div class="rounded-t rounded-b card-item">
+            <img class="rounded-t" src="./img/imgApi/torta-vainilla-con-crema.jpg" alt="hola">
+            <h5 class="px-2 font-medium ptext-lg font-poppins">Titulo</h5>
+            <p class="px-2">precio</p>
+            <button class="px-2 py-1 mx-2 my-2 text-sm text-center rounded-lg btn-comprar">comprar</button>
+        </div>
+    </template>
+    <!-- TMPLT cards fin -->
+
+    <!-- TMPLT Carrito incio -->
+    <template id="tmplt-cart">
+        <tr>
+            <th scope="row">id</th>
+            <td>Postre</td>
+            <td>1</td>
+            <td>
+                <button class="btn">
+                    <img src="icon/cart-plus.svg" alt="aumentar" class="btn-aumentar">
+                </button>
+                <button class="btn">
+                    <img src="icon/cart-minus.svg" alt="disminuir" class="btn-disminuir">
+                </button>
+            </td>
+            <td>$ <span>500</span></td>
+        </tr>
+    </template>
+
+    <template id="tmplt-tabla-footer">
+        <th scope="row" colspan="2">TOTAL</th>
+        <td>10</td>
+        <td>
+            <button class="btn btn-vaciar" id="vaciar-carrito">
+                vaciar todo
+            </button>
+        </td>
+        <td class="font-bold">$ <span>5000</span></td>
+    </template>
+    <!-- TMPLT Carrito fin -->
+
+    <!-- TMPLT formulario inicio -->
+    <template id="tmplt-formulario">
+        
+    </template>
+    <!-- TMPLT formulario fin -->
+
+    <!-- Templates fin -->
+</body>
+
+</html>

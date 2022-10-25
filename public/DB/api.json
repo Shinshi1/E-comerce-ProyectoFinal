@@ -1,0 +1,86 @@
+[
+  {
+    "precio": 4100,
+    "id": 1,
+    "title": "TORTA DE CHOCOLATE",
+    "categoria": "TORTAS",
+    "thumbnailUrl": "./imgApi/torta-de-chocolate.jpg"
+  },
+  {
+    "precio": 4100,
+    "id": 2,
+    "title": "TIRAMISÚ",
+    "categoria": "TORTAS",
+    "thumbnailUrl": "./imgApi/tiramisu-13.jpg"
+  },
+  {
+    "precio": 4300,
+    "id": 3,
+    "title": "TORTA DE VAINILLA",
+    "categoria": "TORTAS",
+    "thumbnailUrl": "./imgApi/torta-vainilla-con-crema.jpg"
+  },
+  {
+    "precio": 350,
+    "id": 4,
+    "title": "TORTA OREO X1",
+    "categoria": "TORTAS",
+    "thumbnailUrl": "./imgApi/torta-oreo-385.jpg"
+  },
+  {
+    "precio": 2360,
+    "id": 5,
+    "title": "TARTA DE RICOTA",
+    "categoria": "TARTA",
+    "thumbnailUrl": "./imgApi/ricota-000.jpg"
+  },
+  {
+    "precio": 1800,
+    "id": 6,
+    "title": "PASTAFROLA",
+    "categoria": "TARTA",
+    "thumbnailUrl": "./imgApi/pastafrola.jpg"
+  },
+  {
+    "precio": 2000,
+    "id": 7,
+    "title": "TARTA FRUTAL",
+    "categoria": "TARTA",
+    "thumbnailUrl": "./imgApi/tarta-frutal-431.jpg"
+  },
+  {
+    "precio": 2200,
+    "id": 8,
+    "title": "TARTA DE COCO",
+    "categoria": "TARTA",
+    "thumbnailUrl": "./imgApi/tarta-de-coco-123.jpg"
+  },
+  {
+    "precio": 3800,
+    "id": 9,
+    "title": "LEMON PIE",
+    "categoria": "POSTRES",
+    "thumbnailUrl": "./imgApi/lemon-pie.jpg"
+  },
+  {
+    "precio": 4300,
+    "id": 10,
+    "title": "BROWNIE",
+    "categoria": "POSTRES",
+    "thumbnailUrl": "./imgApi/brownie-mousse-chocolate.jpg"
+  },
+  {
+    "precio": 1600,
+    "id": 11,
+    "title": "MACARONS X12",
+    "categoria": "POSTRES",
+    "thumbnailUrl": "./imgApi/macarons41.jpg"
+  },
+  {
+    "precio": 1300,
+    "id": 12,
+    "title": "MUFFIN DE CHOCOLATE",
+    "categoria": "POSTRES",
+    "thumbnailUrl": "./imgApi/muffin-123.jpg"
+  }
+]

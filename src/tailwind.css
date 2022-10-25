@@ -1,0 +1,402 @@
+/* --------- Fuentes --------- */
+
+/* IM Fell Great Primer SC */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');
+
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
+
+/* Cormorant Unicase */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@500;600;700&display=swap');
+
+
+@tailwind base; 
+@tailwind components; 
+@tailwind utilities; 
+
+
+/* VARIABLES inicio */
+.font-poppins {
+    font-family: 'Poppins', sans-serif ;
+}
+/* VARIABLES fin */
+
+/* --------- INDEX --------- */
+/* Menu inicio */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    background-color: #F0D0F9;
+}
+
+.text-logo {
+    font-family: 'IM Fell Great Primer SC', serif;
+}
+
+/* Menu fin */
+
+/* Hero inicio */
+.hero {
+    background-color: #F2F0F0;
+}
+
+.h1-title {
+    font-family: 'Cormorant Unicase', serif;
+    font-weight: bold;
+    text-align: center;
+}
+/* Hero fin */
+
+/* Contenedor de Productos inicio */
+
+/* buscador inicio */
+
+.buscador {
+    background-image: url(../icon/search.svg);
+    background-repeat: no-repeat;
+    background-position: 4px, center;
+    background-size: 20px;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    padding-left: 28px;
+    height: 40px;
+    border-radius: 5px;
+
+
+
+    background-color: #e1e1e1b3;
+    backdrop-filter: blur(5px);
+}
+
+.buscador input {
+    background-color: initial;
+    width: 100%;
+    font-size: .9rem;
+    color: #333;
+
+}
+/* Para borrar 'X' */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.buscador__text {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* buscador fin */
+
+.h3-title {
+    font-family: 'Cormorant Unicase', serif;
+    font-weight: bold;
+}
+
+/* Contenedor de Productos inicio */
+
+.productos-container {
+    background-image: url(../img/wallpaper/bg-00.jpg);
+    background-repeat: no-repeat; 
+    height: 170vh;
+    padding-top: 2rem;
+    height: auto;
+    width: auto;
+}
+
+/* section-1 inicio */
+
+/* Grid inicio */
+
+.section-1 {
+    padding-top: 1rem;
+    height: 170vh;
+}
+
+.card-container {
+    height: 250px;
+    width: 90%;
+
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 20px auto;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+    background-position: center;
+}
+
+.card-item {
+    height: 100%;
+    width: fit-content;
+    background: #f2f0f0df;
+}
+
+.card-item img {
+    /* provisional - le da tamaño a la imagen incio*/
+    height: 150px;
+    width: 200px;
+    /* provisional - le da tamaño a la imagen fin*/
+}
+
+.btn-comprar {
+    background-color: #b424db; /* Green */
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-comprar:active {
+    transform: scale(.9);
+}
+
+
+/* Grid fin */
+
+/* CATEGORIAS inicio */
+
+.categoria-container {
+    max-width: 100px;
+    position: relative;
+    top: -5rem;
+    left: 3.5rem;
+}
+
+.categoria-container select {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 7px 10px;
+    height: 42px;
+    outline: 0;
+    border: 2px solid #00000033;
+    background-color: #f2f0f0f0;
+    backdrop-filter: blur(1px);
+    color: #5d5d5d;
+    font-size: .8em;
+    font-weight: 500;
+    appearance: none;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+
+.categoria-container select:hover{
+	background: #b424db;
+    color: #fff;
+}
+
+.categoria-container i{
+	position: absolute;
+	right: 20px;
+	top: calc(50% - -5px);
+	width: 10px;
+	height: 10px;
+	display: block;
+	border-left:2.5px solid #000000;
+	border-bottom:2.5px solid #000;
+	transform: rotate(-45deg); /* Giramos el cuadrado */
+	transition: all 0.25s ease;
+}
+ 
+.content-select:hover i{
+	margin-top: 3px;
+}
+
+.card-container select::-ms-expand {
+    display: none;
+}
+/* CATEGORIAS fin */
+
+/* section 1 fin */
+
+/* Contenedor de Productos fin */
+
+.icon {
+    height: 30px;
+    cursor: pointer;
+}
+
+.icon:active {
+     scale: .7;
+}
+
+
+
+/* ------- Footer incio ------- */
+
+.footer {
+    background-color: #4E4351;
+}
+
+.footer__title{
+    font-family: 'IM Fell Great Primer SC', serif;
+}
+
+.footer__text {
+    font-family: 'Cormorant Unicase', serif;
+}
+
+/* ------- Footer fin ------- */
+
+
+/* ------- Tabla Carrito inicio ------- */
+.tabla-cart {
+    text-align: left;
+    background-color: #292727df;
+    backdrop-filter: blur(1px);
+    top: 3.5rem;
+    left: 100%;
+    height: auto;
+    width: auto;
+    min-height: 15%;
+    min-width: 35%;
+    padding: 2rem;
+    cursor: pointer;
+
+    transition: left 0.3s;
+
+    color: #fff;
+}
+
+.tabla-cart--visible {
+    left: 62.7%;
+}
+
+.tabla-cart th, .tabla-cart td  {
+    padding: .4rem;
+}
+
+.tabla-cart thead {
+    background-color: #edacff9e;
+    border-bottom: solid #f2f0f0;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.tabla-cart tbody {
+    text-align: center;
+}
+
+.tabla-cart tfoot {
+    background-color: #edacff9e;
+    border-top: solid #f2f0f0;
+    border-radius: 4px;
+    text-align: center;
+}
+
+
+/* ------- Tabla Carrito fin ------- */
+
+/* ------- Componentes ------------- */
+
+/* botones */
+.btn {
+    background-color: #edacff9e;
+
+}
+
+.btn-aumentar, .btn-disminuir {
+    line-height: 1.3;
+    width: 1.8rem;
+    border-radius: 4px;
+    border: solid #fff .1rem;
+    font-weight: bold;
+}
+
+.btn-aumentar:hover, .btn-disminuir:hover {
+    background-color: #563a5a;
+    transition: .2s;
+}
+
+.btn-aumentar:active, .btn-disminuir:active {
+    scale: .7;
+}
+
+.btn-vaciar {
+    background-color: #f2f0f0;
+    border-radius: 4px;
+    padding: .3rem;
+    font-size: .8rem;
+    font-weight: bold;
+    color: #563a5a;
+    box-shadow: inset 0 0 0 .05rem  #563a5a;
+    /* border: inset solid  .1rem; */
+}
+
+.btn-vaciar:hover {
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    box-shadow: none;
+    transition-duration: 1s;
+}
+
+/* Realizar Compra */
+.realizar-container {
+    width: 90%;
+}
+
+.realizar-container button {
+    background-color: #b424db;
+    line-height: 2;
+    width: 100%;
+    border-radius: 4px;
+    border: solid #fff .1rem;
+    font-weight: bold;
+    color: #F2F0F0;
+}
+
+.realizar-container button:active {
+    scale: .9;
+}
+
+/* Formulario */
+
+.form-group {
+    height: auto;
+    width: 25%;
+    background-color: #f2f2f2;
+    margin: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    margin-top: .2rem;
+    padding: 10px;
+}
+
+.form .form__input {
+    min-width: 15rem;
+    width: auto;
+    border: none;
+    border-bottom: 1px solid #563a5a;
+    border-radius: 0;
+    background-color: #f2f2f2;
+  }
+  .form .form__input:focus {
+    border-radius: 5px;
+    border: 1px solid #563a5a;
+    box-shadow: 1px 0px 3px #563a5a, -1px 0px 3px #563a5a, 0px 1px 3px #563a5a, 0px -1px 3px #563a5a;
+    outline: transparent;
+  }
+
+  .form .form__btn {
+    border-radius: 3px;
+    color: #eee;
+    background-color: #b424db;
+    border: 1px solid  #fff;
+    margin: 0 20px;
+    padding: .2rem;
+    cursor: pointer;
+  }
+  .form .form__btn:active {
+    scale: .9;
+  }
+
+  
